@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<title>Diarrhea Quiz</title>
+<link src="index.css" rel="stylesheet">
+
+<h1>how much diarrhea is hould have everyday?</h1>
+
+<div id="quiz"></div>
+<input id="startQuizButton" type="button" value="start quiz" onclick="generateQuiz ();" />
+<script src="index.js">
+    generateQuiz ();
+</script>
+
+<div id="submitButton"></div>
+<h2 id="demo"></h2>
+<script>
+    function result () {
+      document.getElementById("demo").innerHTML = 
+        "None! <br\> You should be having no diarrhea. <br\> You don't need this quiz to tell you that, do you? smh";
+      document.getElementById("inspo").innerHTML = 
+        '<a href="https://twitter.com/dril/status/1353058683031146496">(inspiration)</a>';
+    }
+</script>
+
+<div id="inspo"></div>
+
+</html>
