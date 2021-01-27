@@ -6,7 +6,10 @@ function generateQuiz () {
     document.getElementById("submitButton").innerHTML = 
         '<br/> <input id="submitButton" type="button" value="submit" onclick="result ();" />';    
 
+    // the div to put the quiz in
     var quizContainer = document.getElementById('quiz');
+
+    // questions to ask + answers
     var questions = [
         {
             question: "Does your stomach hurt?",
@@ -26,6 +29,15 @@ function generateQuiz () {
             }
         },
         {
+            question: "Did you eat any spoiled food?",
+            answers: {
+                a: 'Yes, I am a masochist <br/>',
+                b: 'Bro I ate oily food and spicy food at the same time lol <br/>',
+                c: 'Not that I know of <br/>',
+                d: 'No <br/> <br/>'
+            }
+        },
+        {
             question: "What is 10*10?",
             answers: {
                 a: '1010 <br/>',
@@ -35,18 +47,18 @@ function generateQuiz () {
         }
     ];
 
+    // formatting the questions
     function showQuestions (questions, quizContainer) {
         var output = [];
-        var answers;
         for (var i = 0; i < questions.length; i++) {
-            answers = [];
+            var answers = [];
             for (letter in questions[i].answers) {
                 answers.push(
-                    '<label>'
+                    '<div class="answer">'
                         + '<input type="radio" name="question'+i+'" value="'+letter+'">'
                         + letter + ': '
                         + questions[i].answers[letter]
-                    + '</label>'
+                    + '</div>'
                 );
             }
             output.push(

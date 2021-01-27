@@ -1,6 +1,23 @@
-.inspo {
-    position: fixed;
-    background: #2184cd;
-    color: #fff;
-    font-size: large;
+.header {
+    text-align: center;
+}
+
+body {
+    background-color: rgba(138, 67, 0, 0.856);
+}
+
+.button {
+    text-align: center;
+}
+
+.question {
+    text-align: center;
+}
+
+.answer {
+    text-align: center;
+}
+
+.result {
+    text-align: center;
 }
